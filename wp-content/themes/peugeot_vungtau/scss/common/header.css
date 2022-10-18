@@ -1,0 +1,39 @@
+.nav-main .navbar-nav .nav-item a {
+  font-family: "UTM Banque";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 56px;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: rgba(100, 100, 100, 0.8117647059);
+    width: 100vw;
+    height: 0;
+    transition: 0.3s height;
+  }
+  .navbar-collapse > ul > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .navbar-collapse > ul > li > a {
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white !important;
+  }
+}
+.navbar-collapse.show {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=header.css.map */

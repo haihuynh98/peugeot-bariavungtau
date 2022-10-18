@@ -1,0 +1,212 @@
+/*!
+Theme Name: Peugeot Vung Tau
+Theme URI: http://underscores.me/
+Author: Peugeot Vung Tau
+Author URI: http://underscores.me/
+Description: Custom theme: Peugeot Vung Tau, developed by Peugeot Vung Tau
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: peugeot_vungtau
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Peugeot Vung Tau is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+ */
+@font-face {
+  font-family: "UTM Banque";
+  src: url("fonts/transfonter/UTMBanqueBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UTM Banque";
+  src: url("fonts/transfonter/UTMBanque.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "UTM Hanzel";
+  src: url("fonts/transfonter/UTMHanzel.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "KIAM";
+  src: url("fonts/transfonter/KIAM.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "UTM Banque";
+}
+
+@media (max-width: 991.98px) {
+  .nav-main .navbar-nav button.navbar-toggler {
+    box-shadow: none;
+    border: none;
+  }
+}
+.nav-main .navbar-nav .nav-item a {
+  font-family: "UTM Banque";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #1f1f1f;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    margin-top: 56px;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    background: rgba(100, 100, 100, 0.8117647059);
+    width: 100vw;
+    height: 0;
+    transition: 0.3s height;
+  }
+  .navbar-collapse > ul > li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  .navbar-collapse > ul > li > a {
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white !important;
+  }
+}
+.navbar-collapse.show {
+  height: 100vh;
+}
+
+.footer-main {
+  padding: 50px 30px;
+  background-color: #222;
+  color: white;
+}
+@media (max-width: 767.98px) {
+  .footer-main {
+    padding: 50px 10px;
+  }
+}
+.footer-main * {
+  font-family: "KIAM";
+}
+.footer-main a {
+  text-decoration: none;
+}
+.footer-main .col-company-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-main .col-company-info ul li {
+  padding-bottom: 10px;
+}
+.footer-main .col-company-info ul .name {
+  font-size: 15px;
+  font-weight: bold;
+}
+.footer-main .col-company-info ul .lisence {
+  font-size: 13px;
+  color: #919191;
+}
+.footer-main .col-company-info .copyright {
+  font-size: 13px;
+  color: #535353;
+}
+.footer-main .col-has-menu .title-footer-menu {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer-main .col-has-menu ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-main .col-has-menu ul li {
+  padding-bottom: 10px;
+}
+.footer-main .col-has-menu ul a {
+  color: #919191;
+}
+.footer-main .col-has-menu ul a:hover {
+  color: white;
+}
+
+.section-w-title > .text-title, .section-w-title > h1 {
+  padding-top: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "UTM Hanzel";
+  font-weight: bold;
+  font-size: 35px;
+}
+@media (max-width: 767.98px) {
+  .section-w-title > .text-title, .section-w-title > h1 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .hide-pc {
+    display: none;
+  }
+}
+@media (max-width: 991.98px) and (min-width: 767.98px) {
+  .hide-tablet {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
