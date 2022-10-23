@@ -18,7 +18,7 @@ get_header();
 <?php
 
 // build banner section
-get_template_part( 'elements/banner-carousel');
+	get_template_part( 'elements/banner-carousel');
 //build car list section
 get_template_part( 'elements/product-list');
 //build 4 column option section
