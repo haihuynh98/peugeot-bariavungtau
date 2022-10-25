@@ -55,7 +55,7 @@
   background-color: unset !important;
 }
 
-.panel.woocommerce-Tabs-panel--description table tr {
+.panel.woocommerce-Tabs-panel--description table tr td {
   padding: 10px;
 }
 
