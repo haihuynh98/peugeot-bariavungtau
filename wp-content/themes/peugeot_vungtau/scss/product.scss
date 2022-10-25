@@ -72,7 +72,9 @@
 .panel.woocommerce-Tabs-panel--description {
 	table {
 		tr {
-			padding: 10px
+			td {
+				padding: 10px;
+			}
 		}
 	}
 }
