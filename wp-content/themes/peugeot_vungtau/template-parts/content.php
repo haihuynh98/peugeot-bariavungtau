@@ -23,7 +23,6 @@
 			<div class="entry-meta">
 				<?php
 				peugeot_vungtau_posted_on();
-				peugeot_vungtau_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
