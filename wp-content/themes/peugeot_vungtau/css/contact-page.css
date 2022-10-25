@@ -1,55 +1,57 @@
 #contact-content .img-banner {
-	filter: brightness(0.75);
-	width: 100% !important;
+  filter: brightness(0.75);
+  width: 100% !important;
 }
 #contact-content .box-contact {
-	display: flex;
-	justify-content: space-between;
-	max-width: 80%;
-	margin: 0 auto;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 #contact-content .box-contact > .box-item {
-	flex: 1;
-	text-align: center;
-	border-right: solid 2px #d9d9d9;
-	padding: 15px 0;
+  flex: 1;
+  text-align: center;
+  border-right: solid 2px #d9d9d9;
+  padding: 15px 0;
 }
 #contact-content .box-contact > .box-item .box-content {
-	list-style: none;
+  list-style: none;
 }
 #contact-content .box-contact > .box-item .box-content .title {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 #contact-content .box-contact > .box-item .box-content .content {
-	margin-top: 15px;
+  margin-top: 15px;
 }
 #contact-content .box-contact > .box-item .box-content .content .text {
-	display: block !important;
-	color: #1f1f1f;
-	font-family: "UTMBanqueBold", sans-serif;
-	text-decoration: none !important;
+  display: block !important;
+  color: #1f1f1f;
+  font-family: "UTMBanqueBold", sans-serif;
+  text-decoration: none !important;
 }
 #contact-content .form-wrap-cf7 .wpcf7 {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 #contact-content .form-wrap-cf7 .wpcf7 td {
-	text-align: left;
+  text-align: left;
 }
-#contact-content .form-wrap-cf7 .wpcf7 td input, #contact-content .form-wrap-cf7 .wpcf7 td select, #contact-content .form-wrap-cf7 .wpcf7 td textarea {
-	width: 100%;
-	height: 42px;
-	border: solid 1px #bababa;
-	border-radius: 45px;
-	font-size: 14px;
-	text-transform: uppercase;
-	padding: 0 20px;
-	flex: 1;
+#contact-content .form-wrap-cf7 .wpcf7 td input, #contact-content .form-wrap-cf7 .wpcf7 td select {
+  width: 100%;
+  height: 42px;
+  border: solid 1px #bababa;
+  border-radius: 45px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 20px;
+  flex: 1;
 }
 #contact-content .form-wrap-cf7 .wpcf7 td textarea {
-	width: 100%;
+  width: 100%;
 }
+
+/*# sourceMappingURL=contact-page.css.map */
