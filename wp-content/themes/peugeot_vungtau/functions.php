@@ -214,4 +214,5 @@ require get_template_directory() . '/functions/head.php';
 
 // load setup contact page
 require get_template_directory() . '/functions/contact.php';
+require get_template_directory() . '/functions/module-carousel.php';
 
