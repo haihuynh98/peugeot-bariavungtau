@@ -44,11 +44,6 @@
 		font-size: 13px;
 	}
 
-	a:hover {
-		background-color: #006d96;
-		font-size: 15px !important;
-	}
-
 	ul.social-icon {
 		list-style: none;
 		padding-left: 0;
@@ -69,5 +64,25 @@
 				}
 			}
 		}
+	}
+
+
+}
+
+.panel.woocommerce-Tabs-panel--description {
+	table {
+		tr {
+			padding: 10px
+		}
+	}
+}
+
+.product-content {
+	* {
+		font-family: 'KIAM';
+	}
+
+	img {
+		max-width: 100%;
 	}
 }
