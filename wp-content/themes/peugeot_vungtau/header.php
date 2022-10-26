@@ -54,8 +54,8 @@ $menu_items = wp_get_nav_menu_items($menu->term_id);
 						<a class="nav-link" href="<?= $menu_item->url?>"><?= $menu_item->post_title?></a>
 					</li>
 						<?php if ($menuIndex == $itemMid):?>
-							<li class="nav-item hide-tablet hide-mobile">
-								<a href="<?= esc_url( home_url( '/' ))?>"><img src="<?= $logoUrl?>" alt="<?= bloginfo( 'name' )?>"></a>
+							<li class="nav-item hide-tablet hide-mobile ">
+								<a href="<?= esc_url( home_url( '/' ))?>"><img class="logo" src="<?= $logoUrl?>" alt="<?= bloginfo( 'name' )?>"></a>
 							</li>
 						<?php endif;?>
 					<?php endforeach;?>
