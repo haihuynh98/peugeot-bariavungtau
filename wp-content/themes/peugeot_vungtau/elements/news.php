@@ -1,99 +1,61 @@
+<?php
+$news_query = new WP_Query([
+	'post_type' => 'post',
+	'post_status' => 'publish',
+	'posts_per_page' => 10
+]);
+
+?>
+
 <section class="news section-w-title container" id="news">
 	<h1 class="text-title text-center text-uppercase">Tin tức</h1>
 	<div class="container-fluid">
 		<!-- Swiper -->
 		<div class="news-swiper mySwiper icon-swipe-left">
 			<div class="swiper-wrapper">
-				<div class="swiper-slide news-slide">
-					<a href="#">
-						<img src="https://kiavietnam.com.vn/storage/product/sportage/3.jpg"/>
-						<div class="row">
-							<div class="col-3 col-date">
-								<div class="news-date">
-									<ul class="news-date">
-										<li class="date">
-											23-06
-										</li>
-										<li class="year">
-											2022
-										</li>
-									</ul>
+				<?php
+				// Start the Loop.
+				while ($news_query->have_posts()) :
+					$news_query->the_post();
+
+					$newsID = get_the_ID();
+					$imagesNews = get_the_post_thumbnail_url($newsID, 'full');
+
+					$links = esc_url(get_permalink());
+					$descriptionNews = get_the_excerpt();
+					$titleNews = get_the_title($newsID);
+					?>
+					<div class="swiper-slide news-slide">
+						<a href="#">
+							<img src="<?= $imagesNews?>"/>
+							<div class="row">
+								<div class="col-3 col-date">
+									<div class="news-date">
+										<ul class="news-date">
+											<li class="date">
+												<?= get_the_date( 'd-m' );?>
+											</li>
+											<li class="year">
+												<?= get_the_date( 'Y' );?>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-9 col-info">
+									<div class="news-info">
+										<h3 class="news-title">
+											<?= $titleNews?>
+										</h3>
+										<p class="news-description text-10">
+											<?= $descriptionNews?>
+										</p>
+									</div>
 								</div>
 							</div>
-							<div class="col-9 col-info">
-								<div class="news-info">
-									<h3 class="news-title">
-										THACO AUTO CHÍNH THỨC XUẤT XƯỞNG MẪU XE KIA SPORTAGE THẾ HỆ HOÀN TOÀN...
-									</h3>
-									<p class="news-description text-10">
-										Vừa qua, THACO AUTO chính thức xuất xưởng Kia Sportage – mẫu xe KIA SUV cao cấp
-										thế hệ hoàn toà...
-									</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="swiper-slide news-slide">
-					<a href="#">
-						<img src="https://kiavietnam.com.vn/storage/bai-dang-t6-2022/sportage/image-2022-04-12t01-22-26-769z.png"/>
-						<div class="row">
-							<div class="col-3 col-date">
-								<div class="news-date">
-									<ul class="news-date">
-										<li class="date">
-											23-06
-										</li>
-										<li class="year">
-											2022
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-9 col-info">
-								<div class="news-info">
-									<h3 class="news-title">
-										THACO AUTO CHÍNH THỨC XUẤT XƯỞNG MẪU XE KIA SPORTAGE THẾ HỆ HOÀN TOÀN...
-									</h3>
-									<p class="news-description text-10">
-										Vừa qua, THACO AUTO chính thức xuất xưởng Kia Sportage – mẫu xe KIA SUV cao cấp
-										thế hệ hoàn toà...
-									</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="swiper-slide news-slide">
-					<a href="#">
-						<img src="https://kiavietnam.com.vn/storage/bai-dang-t3-2022/16-k3-gt/kia-25th3n2022-1.png"/>
-						<div class="row">
-							<div class="col-3 col-date">
-								<div class="news-date">
-									<ul class="news-date">
-										<li class="date">
-											23-06
-										</li>
-										<li class="year">
-											2022
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-9 col-info">
-								<div class="news-info">
-									<h3 class="news-title">
-										THACO AUTO CHÍNH THỨC XUẤT XƯỞNG MẪU XE KIA SPORTAGE THẾ HỆ HOÀN TOÀN...
-									</h3>
-									<p class="news-description text-10">
-										Vừa qua, THACO AUTO chính thức xuất xưởng Kia Sportage – mẫu xe KIA SUV cao cấp
-										thế hệ hoàn toà...
-									</p>
-								</div>
-							</div>
-						</div>
-					</a>
-				</div>
+						</a>
+					</div>
+				<?php endwhile;
+				wp_reset_postdata();?>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
