@@ -26,7 +26,7 @@ $news_query = new WP_Query([
 					$titleNews = get_the_title($newsID);
 					?>
 					<div class="swiper-slide news-slide">
-						<a href="#">
+						<a href="<?= $links?>">
 							<img src="<?= $imagesNews?>"/>
 							<div class="row">
 								<div class="col-3 col-date">
