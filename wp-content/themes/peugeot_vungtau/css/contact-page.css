@@ -16,7 +16,7 @@
     flex-direction: column;
   }
   #contact-content .box-contact > .box-item {
-    border-right: unset;
+    border-right: unset !important;
   }
 }
 #contact-content .box-contact > .box-item {
@@ -39,6 +39,11 @@
   color: #1f1f1f;
   font-family: "UTMBanqueBold", sans-serif;
   text-decoration: none !important;
+}
+#contact-content .form-wrap-cf7 input[type=submit] {
+  border: unset !important;
+  border-radius: 30px;
+  padding: 10px 50px;
 }
 #contact-content .form-wrap-cf7 form {
   width: 100%;

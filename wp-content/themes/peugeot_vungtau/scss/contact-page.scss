@@ -16,7 +16,7 @@
 		@media (max-width: 767.98px) {
 			flex-direction: column;
 			& > .box-item {
-				border-right: unset;
+				border-right: unset !important;
 			}
 		}
 
@@ -49,6 +49,12 @@
 	}
 
 	.form-wrap-cf7 {
+
+		input[type="submit"] {
+			border: unset !important;
+			border-radius: 30px;
+			padding: 10px 50px;
+		}
 
 		form {
 			width: 100%;
