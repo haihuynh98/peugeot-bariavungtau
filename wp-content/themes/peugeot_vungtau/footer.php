@@ -79,6 +79,7 @@ $menu_items_policy_footer = wp_get_nav_menu_items($menu_policy_footer->term_id);
 						<ul class="footer-menu">
 							<?php foreach ($menu_items_policy_footer as $menu_item_footer): ?>
 								<li class="menu-item"><a
+										class="<?php echo implode($menu_item_footer->classes,' ')  ?>"
 										href="<?= $menu_item_footer->url ?>"><?= $menu_item_footer->title ?></a></li>
 							<?php endforeach; ?>
 						</ul>
