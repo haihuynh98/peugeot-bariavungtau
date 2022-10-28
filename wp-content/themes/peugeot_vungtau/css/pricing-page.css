@@ -8,6 +8,7 @@
 }
 .pricing-page .pricing-list .col-image img {
   width: 100%;
+  height: auto;
 }
 .pricing-page .pricing-list .col-image .title-cats {
   font-size: 18px;

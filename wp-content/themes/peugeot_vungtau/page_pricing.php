@@ -22,9 +22,12 @@ $pCats = get_categories($args);
 <main id="contact-content" class="container pricing-page">
 	<?php if (count($pCats) >0 ):?>
 	<?php foreach($pCats as $pCat):?>
+		<?php $thumbnail_term_id = get_term_meta($pCat->term_id, 'thumbnail_id');
+			$thumbnail_id = reset($thumbnail_term_id);
+			?>
 	<div class="row pricing-list">
 		<div class="col-lg-3 col-md-3 col-sm-12 col-12 col-image">
-			<img src="https://kiavietnam.com.vn/storage/product/carnival/edit-car-2.png" alt="car">
+			<?php echo wp_get_attachment_image($thumbnail_id,'large')?>
 			<h3 class="title-cats"><?= $pCat->cat_name ?></h3>
 		</div>
 		<div class="col-lg-9 col-md-9 col-sm-12 col-12 col-pricing">
@@ -57,9 +60,9 @@ $pCats = get_categories($args);
 				?>
 				<tr>
 					<td class="name-product"><?= $titleProduct?></td>
-					<td class="price-product">Gia ban: <?=$price?></td>
+					<td class="price-product">Giá bán: <?=$price?></td>
 					<td class="action-product">
-						<a href="<?=$link?>">Chi tiet ></a>
+						<a href="<?=$link?>">Chi tiết ></a>
 					</td>
 				</tr>
 				<?php
