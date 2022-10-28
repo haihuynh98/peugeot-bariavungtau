@@ -51,6 +51,7 @@ function peugeot_vungtau_setup()
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__('Primary', 'peugeot_vungtau'),
+			'menu-product-footer' => esc_html__('Product footer', 'peugeot_vungtau'),
 		)
 	);
 
