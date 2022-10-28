@@ -1,0 +1,62 @@
+.pricing-page {
+	width: 100%;
+
+	.pricing-list {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		.col-image {
+			img {
+				width: 100%;
+			}
+			.title-cats {
+				font-size: 18px;
+				margin-top: 20px;
+			}
+		}
+
+		.col-pricing {
+			table {
+				width: 100%;
+
+				tbody {
+					tr {
+						padding: 15px 0;
+						border-bottom: solid 1px #e5e5e5;
+
+						&:last-child {
+							border-bottom: unset;
+						}
+
+						td {
+							padding: 15px 0;
+							&.name-product {
+								font-size: 16px;
+							}
+
+							&.price-product {
+								font-size: 14px;
+								color: red;
+							}
+
+							&.action-product {
+								font-size: 12px;
+
+								a {
+									text-decoration: none;
+									color: black;
+									transition: 0.3s;
+
+									&:hover {
+										color: red;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

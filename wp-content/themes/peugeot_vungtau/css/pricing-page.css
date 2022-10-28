@@ -1,0 +1,48 @@
+.pricing-page {
+  width: 100%;
+}
+.pricing-page .pricing-list {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pricing-page .pricing-list .col-image img {
+  width: 100%;
+}
+.pricing-page .pricing-list .col-image .title-cats {
+  font-size: 18px;
+  margin-top: 20px;
+}
+.pricing-page .pricing-list .col-pricing table {
+  width: 100%;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr {
+  padding: 15px 0;
+  border-bottom: solid 1px #e5e5e5;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr:last-child {
+  border-bottom: unset;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td {
+  padding: 15px 0;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.name-product {
+  font-size: 16px;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.price-product {
+  font-size: 14px;
+  color: red;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product {
+  font-size: 12px;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product a:hover {
+  color: red;
+}
+
+/*# sourceMappingURL=pricing-page.css.map */

@@ -23,11 +23,7 @@ $product_query = new WP_Query([
 
 						$link = esc_url(get_permalink());
 						$titleProduct = get_the_title($ProductID);
-//						print_r(get_post_meta($ProductID,'_price',true));
 						$price = get_post_meta($ProductID,'_price',true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID,'_price',true)) . ' VND';
-//						print_r($link);
-//						print_r($titleProduct);
-////						print_r($price);
 						?>
 						<div class="swiper-slide">
 							<img src="<?php echo $imagesSrc ?>"/>
