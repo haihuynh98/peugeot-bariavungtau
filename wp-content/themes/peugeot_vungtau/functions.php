@@ -52,6 +52,7 @@ function peugeot_vungtau_setup()
 		array(
 			'menu-1' => esc_html__('Primary', 'peugeot_vungtau'),
 			'menu-product-footer' => esc_html__('Product footer', 'peugeot_vungtau'),
+			'menu-policy-footer' => esc_html__('Policy footer', 'peugeot_vungtau'),
 		)
 	);
 

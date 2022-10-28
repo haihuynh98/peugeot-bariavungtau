@@ -11,9 +11,13 @@
 
 
 $locations_footer = get_nav_menu_locations();
-$theme_location_footer = 'menu-product-footer';
-$menu_footer = get_term($locations_footer[$theme_location_footer], 'nav_menu');
-$menu_items_footer = wp_get_nav_menu_items($menu_footer->term_id);
+$theme_location_product_footer = 'menu-product-footer';
+$menu_product_footer = get_term($locations_footer[$theme_location_product_footer], 'nav_menu');
+$menu_items_product_footer = wp_get_nav_menu_items($menu_product_footer->term_id);
+
+$theme_location_policy_footer = 'menu-policy-footer';
+$menu_policy_footer = get_term($locations_footer[$theme_location_policy_footer], 'nav_menu');
+$menu_items_policy_footer = wp_get_nav_menu_items($menu_policy_footer->term_id);
 ?>
 
 <footer class="footer-main">
@@ -57,9 +61,9 @@ $menu_items_footer = wp_get_nav_menu_items($menu_footer->term_id);
 
 			<div class="col-lg-1 col-md-12 col-12 col-has-menu">
 				<h4 class="title-footer-menu">Sản phẩm</h4>
-				<?php if (count($menu_items_footer) > 0) : ?>
+				<?php if (count($menu_items_product_footer) > 0) : ?>
 					<ul class="footer-menu">
-						<?php foreach ($menu_items_footer as $menu_item_footer): ?>
+						<?php foreach ($menu_items_product_footer as $menu_item_footer): ?>
 							<li class="menu-item"><a
 									href="<?= $menu_item_footer->url ?>"><?= $menu_item_footer->title ?></a></li>
 						<?php endforeach; ?>
@@ -71,9 +75,14 @@ $menu_items_footer = wp_get_nav_menu_items($menu_footer->term_id);
 				<h4 class="title-footer-menu">Chính sách</h4>
 
 				<ul class="footer-menu">
-					<li class="menu-item"><a href="">ƯU ĐÃI & TIN TỨC</a></li>
-					<li class="menu-item"><a href="">ĐĂNG KÝ LÁI THỬ</a></li>
-					<li class="menu-item"><a href="">TẢI BROCHURE</a></li>
+					<?php if (count($menu_items_policy_footer) > 0) : ?>
+						<ul class="footer-menu">
+							<?php foreach ($menu_items_policy_footer as $menu_item_footer): ?>
+								<li class="menu-item"><a
+										href="<?= $menu_item_footer->url ?>"><?= $menu_item_footer->title ?></a></li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
 				</ul>
 			</div>
 			<div class="col-lg-3 col-md-12 col-12 col-has-menu">
