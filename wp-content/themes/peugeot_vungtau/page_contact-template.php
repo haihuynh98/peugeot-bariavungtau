@@ -90,7 +90,7 @@ $banner = wp_get_attachment_url( get_post_meta($pageID, '_project_banner_img', t
             <div class="u-layout">
                 <div class="u-layout-row">
                     <div class="u-align-left u-container-style u-grey-60 u-layout-cell u-left-cell u-opacity u-opacity-75 u-size-30 u-layout-cell-1">
-                        <div class="u-container-layout u-container-layout-5">
+                        <div class="container u-container-layout-5">
                             <h3 class="u-text u-text-body-alt-color u-text-default u-text-9" style="    font-family: "UTMBanqueBold",sans-serif;
 							color: #1f1f1f;
 							padding-bottom: 40px;">VUI LÒNG ĐỂ LẠI THÔNG TIN LIÊN HỆ THEO MẪU BÊN DƯỚI</h3>

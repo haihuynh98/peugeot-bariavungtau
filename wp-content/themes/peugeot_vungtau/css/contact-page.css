@@ -9,6 +9,15 @@
   margin: 0 auto;
   padding: 0;
   list-style: none;
+  margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  #contact-content .box-contact {
+    flex-direction: column;
+  }
+  #contact-content .box-contact > .box-item {
+    border-right: unset;
+  }
 }
 #contact-content .box-contact > .box-item {
   flex: 1;
@@ -30,6 +39,16 @@
   color: #1f1f1f;
   font-family: "UTMBanqueBold", sans-serif;
   text-decoration: none !important;
+}
+#contact-content .form-wrap-cf7 form {
+  width: 100%;
+  padding: 0 20px;
+}
+#contact-content .form-wrap-cf7 form table {
+  width: 100%;
+}
+#contact-content .form-wrap-cf7 form table td {
+  padding: 10px 0;
 }
 #contact-content .form-wrap-cf7 .wpcf7 {
   display: flex;
