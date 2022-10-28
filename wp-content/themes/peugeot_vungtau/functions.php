@@ -53,6 +53,7 @@ function peugeot_vungtau_setup()
 			'menu-1' => esc_html__('Primary', 'peugeot_vungtau'),
 			'menu-product-footer' => esc_html__('Product footer', 'peugeot_vungtau'),
 			'menu-policy-footer' => esc_html__('Policy footer', 'peugeot_vungtau'),
+			'menu-inside-news' => esc_html__('Inside news page', 'peugeot_vungtau'),
 		)
 	);
 
@@ -174,6 +175,10 @@ function peugeot_vungtau_scripts()
 
 	if (is_home()) {
 		wp_enqueue_style('home-page', get_stylesheet_directory_uri() . '/css/home-page.css', array(), _S_VERSION);
+	}
+
+	if (is_archive()) {
+		wp_enqueue_style('archive-page', get_stylesheet_directory_uri() . '/css/archive.css', array(), _S_VERSION);
 	}
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
