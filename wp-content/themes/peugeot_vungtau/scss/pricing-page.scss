@@ -61,3 +61,37 @@
 		}
 	}
 }
+
+.banner-header {
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 40vh;
+	width: 100%;
+
+	.content {
+		width: fit-content;
+		height: fit-content;
+		position: absolute;
+		z-index: 2;
+		bottom: 10vh;
+		left: 30px;
+
+
+		.title {
+			color: white;
+		}
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(66, 66, 66, 0.65);
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}
