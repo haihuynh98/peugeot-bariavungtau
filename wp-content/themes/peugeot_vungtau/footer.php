@@ -92,7 +92,7 @@ $menu_items_policy_footer = wp_get_nav_menu_items($menu_policy_footer->term_id);
 
 				<ul class="footer-menu">
 					<li class="menu-item"><a href="tell:1234565656">HOTLINE: 079 72 99 789</a></li>
-					<li class="menu-item"><a href="mailto:cskh@peugeotvietnam.com">hiepnguyenduc1@thaco.com.vn</a></li>
+					<li class="menu-item"><a href="mailto:cskh@peugeotvietnam.com">nguyenduchiep1@thaco.com.vn</a></li>
 				</ul>
 			</div>
 		</div>

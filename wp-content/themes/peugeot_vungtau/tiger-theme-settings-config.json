@@ -1,0 +1,120 @@
+{
+  "contact": {
+    "title": "Contact",
+    "type": "section",
+    "fields": {
+      "contact_page_uri": {
+        "title": "Contact page uri",
+        "type": "field",
+        "input_type": "text"
+      }
+    }
+  },
+  "home": {
+    "title": "Home Page",
+    "type": "section",
+    "fields": {
+      "home_services_heading_1" : {
+        "title" : "Services - heading 1",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_description_1" : {
+        "title" : "Services - description 1",
+        "type" : "field",
+        "input_type": "textarea"
+      },
+      "home_services_url_1" : {
+        "title" : "Services - direct link 1",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_icon_1" : {
+        "title" : "Services - icon 1",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_image_1" : {
+        "title" : "Services - image uri 1",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_heading_2" : {
+        "title" : "Services - heading 2",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_description_2" : {
+        "title" : "Services - description 2",
+        "type" : "field",
+        "input_type": "textarea"
+      },
+      "home_services_url_2" : {
+        "title" : "Services - direct link 2",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_icon_2" : {
+        "title" : "Services - icon 2",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_image_2" : {
+        "title" : "Services - image uri 2",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_heading_3" : {
+        "title" : "Services - heading 3",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_description_3" : {
+        "title" : "Services - description 3",
+        "type" : "field",
+        "input_type": "textarea"
+      },
+      "home_services_url_3" : {
+        "title" : "Services - direct link 3",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_icon_3" : {
+        "title" : "Services - icon 3",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_image_3" : {
+        "title" : "Services - image uri 3",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_heading_4" : {
+        "title" : "Services - heading 4",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_description_4" : {
+        "title" : "Services - description 4",
+        "type" : "field",
+        "input_type": "textarea"
+      },
+      "home_services_url_4" : {
+        "title" : "Services - direct link 4",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_icon_4" : {
+        "title" : "Services - icon 4",
+        "type" : "field",
+        "input_type": "text"
+      },
+      "home_services_image_4" : {
+        "title" : "Services - image uri 4",
+        "type" : "field",
+        "input_type": "text"
+      }
+    }
+  }
+}
+

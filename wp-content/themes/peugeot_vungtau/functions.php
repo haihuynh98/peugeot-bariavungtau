@@ -163,6 +163,7 @@ function peugeot_vungtau_scripts()
 	}
 	wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap/bootstrap.js', array(), _S_VERSION);
 	wp_enqueue_script('swiper-bundle', get_template_directory_uri() . '/js/swiper/swiper-bundle.min.js', array(), _S_VERSION);
+	wp_enqueue_script('common-jquery', get_template_directory_uri() . '/js/common-jquery.js', array(), _S_VERSION, true);
 
 	if (is_page_template(['page_contact-template.php'])) {
 		wp_enqueue_style('contact-page', get_template_directory_uri() . '/css/contact-page.css', array(), _S_VERSION);

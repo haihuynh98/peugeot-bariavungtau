@@ -7,7 +7,7 @@ $product_query = new WP_Query([
 ?>
 
 <section class="product-list section-w-title" id="product_list">
-	<h1 class="text-title text-center text-uppercase">Mua xe</h1>
+	<h1 class="text-title text-center text-uppercase">Sản Phẩm</h1>
 
 	<div class="container-fluid">
 		<div class="product-slide" id="product_slide">

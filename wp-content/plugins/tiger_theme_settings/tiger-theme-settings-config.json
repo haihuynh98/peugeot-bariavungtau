@@ -1,0 +1,25 @@
+{
+  "section_id": {
+    "title": "Section Name",
+    "type": "section",
+    "fields": {
+      "field_id" : {
+        "title": "field Name",
+        "type": "field",
+        "input_type": "text"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "type": "section",
+    "fields": {
+      "contact_page_uri" : {
+        "title": "Contact page uri",
+        "type": "field",
+        "input_type": "text"
+      }
+    }
+  }
+}
+
