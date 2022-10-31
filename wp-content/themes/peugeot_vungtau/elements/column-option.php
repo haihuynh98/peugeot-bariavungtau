@@ -1,6 +1,5 @@
 <?php if(function_exists('getTigerOption')):?>
 <section class="column-option section-w-title" id="column_option">
-	<h1 class="text-title text-center text-uppercase">Mua Xe</h1>
 	<div class="container-fluid">
 		<div class="row-column icon-swipe-left">
 			<?php for ($i = 1;$i <=4; $i++):?>
