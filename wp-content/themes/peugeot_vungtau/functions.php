@@ -169,7 +169,7 @@ function peugeot_vungtau_scripts()
 		wp_enqueue_style('contact-page', get_template_directory_uri() . '/css/contact-page.css', array(), _S_VERSION);
 	}
 
-	if (is_page_template(['page_pricing.php'])) {
+	if (is_page_template(['page_pricing.php', 'page_brochure-template.php'])) {
 		wp_enqueue_style('pricing-page', get_template_directory_uri() . '/css/pricing-page.css', array(), _S_VERSION);
 	}
 
