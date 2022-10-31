@@ -239,7 +239,7 @@ function publish_main_product($post)
 		$value = get_post_meta($post->ID, '_publish_main_product', true);
 		echo '<div class="misc-pub-section misc-pub-section-last">
          <span id="timestamp">'
-			. '<label><input type="checkbox"' . (!empty($value) ? ' checked="checked" ' : null) . 'value="1" name="publish_main_product" />Main Product</label>'
+			. '<label><input type="checkbox"' . (!empty($value) ? ' checked="checked" ' : null) . 'name="publish_main_product" />Main Product</label>'
 			. '</span></div>';
 	}
 }
