@@ -173,8 +173,8 @@ function peugeot_vungtau_scripts()
 		wp_enqueue_style('pricing-page', get_template_directory_uri() . '/css/pricing-page.css', array(), _S_VERSION);
 	}
 
-	if (is_singular( array( 'product' ))){
-		wp_enqueue_style( 'product-page', get_template_directory_uri() . '/css/product.css', array(), _S_VERSION );
+	if (is_singular(array('product'))) {
+		wp_enqueue_style('product-page', get_template_directory_uri() . '/css/product.css', array(), _S_VERSION);
 	}
 
 
@@ -229,3 +229,31 @@ require get_template_directory() . '/functions/contact.php';
 require get_template_directory() . '/functions/module-carousel.php';
 require get_template_directory() . '/functions/module-extra-product-cat.php';
 
+add_action('post_submitbox_misc_actions', 'publish_main_product');
+function publish_main_product($post)
+{
+	if (get_post_type() == 'product') {
+		$value = get_post_meta($post->ID, '_publish_main_product', true);
+		echo '<div class="misc-pub-section misc-pub-section-last">
+         <span id="timestamp">'
+			. '<label><input type="checkbox"' . (!empty($value) ? ' checked="checked" ' : null) . 'value="1" name="publish_main_product" />Main Product</label>'
+			. '</span></div>';
+	}
+}
+
+add_action( 'save_post', 'save_product_data' );
+function save_product_data($postid)
+{
+
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return false;
+	if (!current_user_can('edit_page', $postid)) return false;
+	if (empty($postid) || $_POST['post_type'] != 'product') return false;
+
+	if ($_POST['action'] == 'editpost') {
+		delete_post_meta($postid, '_publish_main_product');
+	}
+
+	if (isset($_POST['publish_main_product'])) {
+		add_post_meta($postid, '_publish_main_product', $_POST['publish_main_product']);
+	}
+}
