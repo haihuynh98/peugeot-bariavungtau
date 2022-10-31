@@ -7,10 +7,8 @@
 		</div>
 
 	</div>
-	<div class="col-lg-6 col-md-6 col-12 p-2">
+	<div class="col-lg-12 col-md-12 col-12 p-2">
 		<a class=" col-bg-blue btn popup_dklt" href="#">Đăng ký lái thử</a></div>
-	<div class="col-lg-6 col-md-6 col-12 p-2">
-		<a class="col-lg-6 col-md-6 col-12 col-bg-blue btn" href="#">Dự toán</a></div>
 </div>
 
 <?php $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>

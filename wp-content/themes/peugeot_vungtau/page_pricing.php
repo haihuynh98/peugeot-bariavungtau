@@ -59,7 +59,7 @@ $pCats = get_categories($args);
 
 							$ProductID = get_the_ID();
 
-							$link = esc_url(get_permalink());
+							$link = get_permalink(get_term_meta($pCat->term_id,'post_sticky_product',true));
 							$titleProduct = get_the_title($ProductID);
 							$price = get_post_meta($ProductID, '_price', true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID, '_price', true)) . ' VND';
 							?>
@@ -67,7 +67,12 @@ $pCats = get_categories($args);
 								<td class="name-product"><?= $titleProduct ?></td>
 								<td class="price-product">Giá bán: <?= $price ?></td>
 								<td class="action-product">
+									<?php if ($link):?>
 									<a href="<?= $link ?>">Chi tiết ></a>
+									<?php endif;?>
+									<?php if ($brochureLink = get_term_meta($pCat->term_id,"brochure_file_url",true)):?>
+										<a href="<?= $brochureLink ?>">Tải Brochure ></a>
+									<?php endif;?>
 								</td>
 							</tr>
 						<?php

@@ -12,7 +12,7 @@
 				height: auto;
 			}
 			.title-cats {
-				font-size: 18px;
+				font-size: 14px;
 				margin-top: 20px;
 			}
 		}
@@ -25,9 +25,19 @@
 					tr {
 						padding: 15px 0;
 						border-bottom: solid 1px #e5e5e5;
+						@media only screen and (max-width: 599px) {
+							display: flex;
+							flex-direction: column;
 
-						&:last-child {
-							border-bottom: unset;
+							td {
+								padding:  0 0 8px !important;
+							}
+						}
+						@media only screen and (min-width: 598px) {
+
+							&:last-child {
+								border-bottom: unset;
+							}
 						}
 
 						td {
@@ -38,19 +48,28 @@
 
 							&.price-product {
 								font-size: 14px;
-								color: red;
+								color: #ac2b31;
+								font-family: "KIAM";
 							}
 
 							&.action-product {
 								font-size: 12px;
-
+								display: flex;
+								flex-direction: column;
+								@media only screen and (max-width: 599px) {
+									flex-direction: row;
+								}
 								a {
 									text-decoration: none;
 									color: black;
 									transition: 0.3s;
+									font-family: "KIAM";
+									@media only screen and (max-width: 599px) {
+										margin-right: 20px;
+									}
 
 									&:hover {
-										color: red;
+										color: #ac2b31;
 									}
 								}
 							}
