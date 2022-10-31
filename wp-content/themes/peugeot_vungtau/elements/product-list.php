@@ -3,6 +3,8 @@ $product_query = new WP_Query([
 	'post_type' => 'product',
 	'post_status' => 'publish',
 	'posts_per_page' => -1,
+	'orderby' => 'title',
+	'order' => 'ASC',
 	'meta_query' => array(
 		array(
 			'key'     => '_publish_main_product',

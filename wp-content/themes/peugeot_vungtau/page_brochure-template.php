@@ -38,6 +38,8 @@ $pCats = get_categories($args);
 						$product_query = new WP_Query([
 							'post_type' => 'product',
 							'post_status' => 'publish',
+							'orderby' => 'title',
+							'order' => 'ASC',
 							'tax_query' => array(
 								array(
 									'taxonomy' => 'product_cat',

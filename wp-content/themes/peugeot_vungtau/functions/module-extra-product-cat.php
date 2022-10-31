@@ -10,6 +10,8 @@ function add_custom_fields_product_cat($tag)
 	$postStickyProductID = get_term_meta($t_id,"post_sticky_product",true);
 	$args = array(
 		'post_type' => 'product',
+		'orderby' => 'title',
+		'order' => 'ASC',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'product_cat',
