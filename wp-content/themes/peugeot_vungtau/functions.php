@@ -181,6 +181,9 @@ function peugeot_vungtau_scripts()
 	if (is_home()) {
 		wp_enqueue_style('home-page', get_stylesheet_directory_uri() . '/css/home-page.css', array(), _S_VERSION);
 	}
+	if (is_404()) {
+		wp_enqueue_style('404-page', get_stylesheet_directory_uri() . '/css/404.css', array(), _S_VERSION);
+	}
 
 	if (is_archive()) {
 		wp_enqueue_style('archive-page', get_stylesheet_directory_uri() . '/css/archive.css', array(), _S_VERSION);
