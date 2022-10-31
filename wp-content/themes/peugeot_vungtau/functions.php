@@ -260,3 +260,9 @@ function save_product_data($postid)
 		add_post_meta($postid, '_publish_main_product', $_POST['publish_main_product']);
 	}
 }
+
+
+/**
+ * Remove related products output
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
