@@ -80,6 +80,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   font-family: "UTM Banque";
 }
 
+.nav-main .logo {
+  height: 37px;
+  width: auto;
+}
 @media (max-width: 991.98px) {
   .nav-main .navbar-nav button.navbar-toggler {
     box-shadow: none;

@@ -1,0 +1,69 @@
+.custom-summary .aioseo-breadcrumbs {
+  text-transform: uppercase;
+  font-size: 13px;
+  color: rgba(102, 102, 102, 0.7);
+}
+.custom-summary .aioseo-breadcrumbs a {
+  text-decoration: none;
+  color: rgba(102, 102, 102, 0.7);
+  font-weight: normal;
+}
+.custom-summary .aioseo-breadcrumbs a:hover {
+  color: #111;
+}
+.custom-summary .product-title {
+  font-size: 28px;
+}
+.custom-summary .is-divider {
+  height: 3px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 1em 0 1em;
+  width: 100%;
+  max-width: 30px;
+}
+.custom-summary .price {
+  font-size: 1.5em !important;
+  color: #111 !important;
+}
+.custom-summary .col-bg-blue {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #00adef;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 13px;
+}
+.custom-summary ul.social-icon {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+.custom-summary ul.social-icon > li {
+  padding: 10px;
+}
+.custom-summary ul.social-icon > li > a {
+  color: gray;
+  text-decoration: none;
+  font-size: 25px;
+}
+.custom-summary ul.social-icon > li > a:hover {
+  color: black;
+  font-size: 25px !important;
+  background-color: unset !important;
+}
+
+.panel.woocommerce-Tabs-panel--description table tr td {
+  padding: 10px;
+}
+
+.product-content * {
+  font-family: "KIAM";
+}
+.product-content img {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=product.css.map */

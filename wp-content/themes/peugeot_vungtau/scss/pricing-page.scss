@@ -1,0 +1,116 @@
+.pricing-page {
+	width: 100%;
+
+	.pricing-list {
+		width: 100%;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		.col-image {
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.title-cats {
+				font-size: 14px;
+				margin-top: 20px;
+			}
+		}
+
+		.col-pricing {
+			table {
+				width: 100%;
+
+				tbody {
+					tr {
+						padding: 15px 0;
+						border-bottom: solid 1px #e5e5e5;
+						@media only screen and (max-width: 599px) {
+							display: flex;
+							flex-direction: column;
+
+							td {
+								padding:  0 0 8px !important;
+							}
+						}
+						@media only screen and (min-width: 598px) {
+
+							&:last-child {
+								border-bottom: unset;
+							}
+						}
+
+						td {
+							padding: 15px 0;
+							&.name-product {
+								font-size: 16px;
+							}
+
+							&.price-product {
+								font-size: 14px;
+								color: #ac2b31;
+								font-family: "KIAM";
+							}
+
+							&.action-product {
+								font-size: 12px;
+								display: flex;
+								flex-direction: column;
+								@media only screen and (max-width: 599px) {
+									flex-direction: row;
+								}
+								a {
+									text-decoration: none;
+									color: black;
+									transition: 0.3s;
+									font-family: "KIAM";
+									@media only screen and (max-width: 599px) {
+										margin-right: 20px;
+									}
+
+									&:hover {
+										color: #ac2b31;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.banner-header {
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	height: 40vh;
+	width: 100%;
+
+	.content {
+		width: fit-content;
+		height: fit-content;
+		position: absolute;
+		z-index: 2;
+		bottom: 10vh;
+		left: 30px;
+
+
+		.title {
+			color: white;
+		}
+	}
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(66, 66, 66, 0.65);
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
+}

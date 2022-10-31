@@ -1,0 +1,104 @@
+.pricing-page {
+  width: 100%;
+}
+.pricing-page .pricing-list {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pricing-page .pricing-list .col-image img {
+  width: 100%;
+  height: auto;
+}
+.pricing-page .pricing-list .col-image .title-cats {
+  font-size: 14px;
+  margin-top: 20px;
+}
+.pricing-page .pricing-list .col-pricing table {
+  width: 100%;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr {
+  padding: 15px 0;
+  border-bottom: solid 1px #e5e5e5;
+}
+@media only screen and (max-width: 599px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing-page .pricing-list .col-pricing table tbody tr td {
+    padding: 0 0 8px !important;
+  }
+}
+@media only screen and (min-width: 598px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr:last-child {
+    border-bottom: unset;
+  }
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td {
+  padding: 15px 0;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.name-product {
+  font-size: 16px;
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.price-product {
+  font-size: 14px;
+  color: #ac2b31;
+  font-family: "KIAM";
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 599px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr td.action-product {
+    flex-direction: row;
+  }
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+  font-family: "KIAM";
+}
+@media only screen and (max-width: 599px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr td.action-product a {
+    margin-right: 20px;
+  }
+}
+.pricing-page .pricing-list .col-pricing table tbody tr td.action-product a:hover {
+  color: #ac2b31;
+}
+
+.banner-header {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+}
+.banner-header .content {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  z-index: 2;
+  bottom: 10vh;
+  left: 30px;
+}
+.banner-header .content .title {
+  color: white;
+}
+.banner-header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(66, 66, 66, 0.65);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=pricing-page.css.map */
