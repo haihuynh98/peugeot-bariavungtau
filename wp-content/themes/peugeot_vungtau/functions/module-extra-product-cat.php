@@ -7,7 +7,7 @@ add_action('product_cat_edit_form_fields', 'add_custom_fields_product_cat');
 function add_custom_fields_product_cat($tag)
 {    //check for existing featured ID
 	$t_id = $tag->term_id;
-	$postStickyProductID = get_term_meta($t_id,"post_sticky_product",true);
+	$postStickyProductID = get_term_meta($t_id, "post_sticky_product", true);
 	$args = array(
 		'post_type' => 'product',
 		'orderby' => 'title',
@@ -46,7 +46,8 @@ function add_custom_fields_product_cat($tag)
 			<th scope="row" valign="top"><label for="brochure_file"><?php _e('Brochure file url'); ?></label></th>
 
 			<td>
-				<input type="url" id="brochure_file_url" name="brochure_file_url" style="width:100%" value="<?= get_term_meta($t_id,"brochure_file_url",true)?>">
+				<input type="url" id="brochure_file_url" name="brochure_file_url" style="width:100%"
+					   value="<?= get_term_meta($t_id, "brochure_file_url", true) ?>">
 			</td>
 		</tr>
 		</tr>
@@ -64,20 +65,30 @@ function save_custom_product_cat_fileds($term_id)
 
 	if (isset($_POST['post_sticky_product'])) {
 		$valueTermMeta = $_POST['post_sticky_product'];
-		add_term_meta($t_id,'post_sticky_product', $valueTermMeta);
+		if (get_term_meta($t_id, "post_sticky_product", true)) {
+			update_term_meta($t_id, "post_sticky_product", $valueTermMeta);
+		} else {
+			add_term_meta($t_id, "post_sticky_product", $valueTermMeta);
+		}
+
 	} else {
 		if (!empty(get_option("post_sticky_product_$t_id"))) {
-			delete_term_meta($t_id,"post_sticky_product");
+			delete_term_meta($t_id, "post_sticky_product");
 		}
 	}
 
 
 	if (isset($_POST['brochure_file_url'])) {
 		$valueTermMeta = $_POST['brochure_file_url'];
-		add_term_meta($t_id,"brochure_file_url", $valueTermMeta);
+		if (get_term_meta($t_id, "brochure_file_url", true)) {
+			update_term_meta($t_id, "brochure_file_url", $valueTermMeta);
+		} else {
+			add_term_meta($t_id, "brochure_file_url", $valueTermMeta);
+
+		}
 	} else {
 		if (!empty(get_option("brochure_file_url_$t_id"))) {
-			delete_term_meta($t_id,"brochure_file_url");
+			delete_term_meta($t_id, "brochure_file_url");
 		}
 	}
 }
