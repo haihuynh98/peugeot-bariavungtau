@@ -72,14 +72,14 @@ function save_custom_product_cat_fileds($term_id)
 		}
 
 	} else {
-		if (!empty(get_option("post_sticky_product_$t_id"))) {
+		if (!empty(get_term_meta($t_id, "post_sticky_product", true))) {
 			delete_term_meta($t_id, "post_sticky_product");
 		}
 	}
 
 
 	if (isset($_POST['brochure_file_url'])) {
-		$valueTermMeta = $_POST['brochure_file_url'];
+		$valueTermMeta = $_POST['brochure_file_url'] ? 1 : 0;
 		if (get_term_meta($t_id, "brochure_file_url", true)) {
 			update_term_meta($t_id, "brochure_file_url", $valueTermMeta);
 		} else {
@@ -87,7 +87,7 @@ function save_custom_product_cat_fileds($term_id)
 
 		}
 	} else {
-		if (!empty(get_option("brochure_file_url_$t_id"))) {
+		if (!empty(get_term_meta($t_id, "brochure_file_url", true))) {
 			delete_term_meta($t_id, "brochure_file_url");
 		}
 	}
