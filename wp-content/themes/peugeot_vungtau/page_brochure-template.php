@@ -19,9 +19,6 @@ $pCats = get_categories($args);
 ?>
 <section class="banner-header"
 		 style="background-image: url('<?= get_theme_file_uri() . '/images/banner/banner-pricing-page.jpg' ?>')">
-	<div class="content">
-		<h2 class="title"><?= get_the_title() ?></h2>
-	</div>
 </section>
 
 <main id="contact-content" class="container pricing-page">
