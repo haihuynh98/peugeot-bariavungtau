@@ -31,15 +31,12 @@ $pCats = get_categories($args);
 			$thumbnail_id = reset($thumbnail_term_id);
 			?>
 			<div class="row pricing-list">
-				<div class="col-lg-3 col-md-3 col-sm-12 col-12 col-image">
+				<div class="col-lg-3 col-md-12 col-sm-12 col-12 col-image">
 					<?php echo wp_get_attachment_image($thumbnail_id, 'large') ?>
 					<h3 class="title-cats"><?= $pCat->cat_name ?></h3>
 				</div>
-				<div class="col-lg-9 col-md-9 col-sm-12 col-12 col-pricing">
+				<div class="col-lg-9 col-md-12 col-sm-12 col-12 col-pricing">
 					<table>
-						<colgroup>
-							<col span="1" style="width: 50%">
-						</colgroup>
 						<tbody>
 						<?php
 						$product_query = new WP_Query([
