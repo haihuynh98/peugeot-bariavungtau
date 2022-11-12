@@ -42,21 +42,27 @@
 
 						td {
 							padding: 15px 0;
+							@media only screen and (max-width: 599px) {
+								width: 100% !important;
+							}
 							&.name-product {
+								width: 50%;
 								font-size: 16px;
 							}
 
 							&.price-product {
+								width: 35%;
 								font-size: 14px;
 								color: #ac2b31;
 								font-family: "KIAM";
 							}
 
 							&.action-product {
+								width: 15%;
 								font-size: 12px;
-								display: flex;
-								flex-direction: column;
+
 								@media only screen and (max-width: 599px) {
+									display: flex;
 									flex-direction: row;
 								}
 								a {
@@ -64,6 +70,11 @@
 									color: black;
 									transition: 0.3s;
 									font-family: "KIAM";
+
+									@media only screen and (min-width: 599px) {
+										display: block;
+										width: 100%;
+									}
 									@media only screen and (max-width: 599px) {
 										margin-right: 20px;
 									}

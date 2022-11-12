@@ -28,7 +28,7 @@ $menu_items_policy_footer = wp_get_nav_menu_items($menu_policy_footer->term_id);
 					<li class="company-info">
 						<ul>
 							<li class="name">
-								<span>CÔNG TY TNHH TRƯỜNG HẢI - VŨNG TÀU</span>
+								<span><?= getTigerOption('brand_name') ?></span>
 							</li>
 							<!--							<li class="lisence">-->
 							<!--                                    <span class="text-footer">GIẤY CNĐKDN:-->
@@ -39,8 +39,7 @@ $menu_items_policy_footer = wp_get_nav_menu_items($menu_policy_footer->term_id);
 							<!--                                        PHÒNG ĐĂNG KÝ KINH DOANH SỞ KẾ HOẠCH VÀ ĐẦU TƯ TỈNH QUẢNG NAM</span>-->
 							<!--							</li>-->
 							<li class="lisence">
-                                    <span class="text-footer">ĐỊA CHỈ:
-										422 THỐNG NHẤT MỚI, PHƯỜNG 8, TP VŨNG TÀU, TỈNH BÀ RỊA - VŨNG TÀU, VIỆT NAM</span>
+                                    <span class="text-footer"> ĐỊA CHỈ: <?= getTigerOption('address_footer') ?></span>
 							</li>
 						</ul>
 					</li>

@@ -38,21 +38,28 @@
 .pricing-page .pricing-list .col-pricing table tbody tr td {
   padding: 15px 0;
 }
+@media only screen and (max-width: 599px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr td {
+    width: 100% !important;
+  }
+}
 .pricing-page .pricing-list .col-pricing table tbody tr td.name-product {
+  width: 50%;
   font-size: 16px;
 }
 .pricing-page .pricing-list .col-pricing table tbody tr td.price-product {
+  width: 35%;
   font-size: 14px;
   color: #ac2b31;
   font-family: "KIAM";
 }
 .pricing-page .pricing-list .col-pricing table tbody tr td.action-product {
+  width: 15%;
   font-size: 12px;
-  display: flex;
-  flex-direction: column;
 }
 @media only screen and (max-width: 599px) {
   .pricing-page .pricing-list .col-pricing table tbody tr td.action-product {
+    display: flex;
     flex-direction: row;
   }
 }
@@ -61,6 +68,12 @@
   color: black;
   transition: 0.3s;
   font-family: "KIAM";
+}
+@media only screen and (min-width: 599px) {
+  .pricing-page .pricing-list .col-pricing table tbody tr td.action-product a {
+    display: block;
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 599px) {
   .pricing-page .pricing-list .col-pricing table tbody tr td.action-product a {

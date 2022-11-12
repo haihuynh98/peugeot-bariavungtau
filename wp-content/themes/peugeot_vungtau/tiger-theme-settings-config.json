@@ -7,6 +7,16 @@
         "title": "Contact page uri",
         "type": "field",
         "input_type": "text"
+      },
+      "address_footer": {
+        "title": "Address footer page",
+        "type": "field",
+        "input_type": "text"
+      },
+      "brand_name": {
+        "title": "Brand name footer page",
+        "type": "field",
+        "input_type": "text"
       }
     }
   },
@@ -116,5 +126,6 @@
       }
     }
   }
+
 }
 

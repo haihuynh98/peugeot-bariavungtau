@@ -1,3 +1,6 @@
+.banner-carousel {
+  position: relative;
+}
 .banner-carousel .swiper-button-next, .banner-carousel .swiper-button-prev {
   background-repeat: no-repeat;
   background-size: contain;
