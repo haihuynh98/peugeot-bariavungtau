@@ -266,3 +266,50 @@ function save_product_data($postid)
  * Remove related products output
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+add_action( 'init', 'prefix_estimate_cost_rewrite_rule' );
+function prefix_estimate_cost_rewrite_rule() {
+	add_rewrite_rule( 'du-toan-chi-phi/([a-z0-9-]+)[/]?$', 'index.php?p_slug=$matches[1]', 'top' );
+}
+
+//* Register Variables
+add_filter( 'query_vars', 'prefix_register_query_var' );
+function prefix_register_query_var( $vars ) {
+	$vars[] = 'p_slug';
+
+	return $vars;
+}
+
+
+//* Rewrite Template
+add_action( 'template_redirect', 'prefix_url_rewrite_templates' );
+function prefix_url_rewrite_templates() {
+
+	if (get_query_var( 'p_slug' )) {
+		add_filter( 'template_include', function() {
+			wp_enqueue_style('estimate-cost-page', get_template_directory_uri() . '/css/estimate-cost.css', array(), _S_VERSION);
+			wp_enqueue_script('estimate-cost-page', get_template_directory_uri() . '/js/estimate-cost.js', array(), _S_VERSION, true);
+			return get_template_directory() . '/page_estimate-cost.php';
+		});
+	}
+
+}
+
+
+require_once 'functions/module-district-vn/module-district.php';
+
+function get_content_url($url) {
+	$c = curl_init($url);
+	curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+//curl_setopt(... other options you want...)
+
+	$html = curl_exec($c);
+
+	if (curl_error($c))
+		die(curl_error($c));
+
+// Get the status code
+	$status = curl_getinfo($c, CURLINFO_HTTP_CODE);
+
+	curl_close($c);
+}

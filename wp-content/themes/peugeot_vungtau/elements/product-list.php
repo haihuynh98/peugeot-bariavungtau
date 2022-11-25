@@ -34,7 +34,7 @@ $product_query = new WP_Query([
 
 						$link = esc_url(get_permalink());
 						$titleProduct = get_the_title($ProductID);
-						$price = get_post_meta($ProductID,'_price',true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID,'_price',true)) . ' VND';
+						$price = get_post_meta($ProductID,'_regular_price',true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID,'_regular_price',true)) . ' VNĐ';
 						?>
 						<div class="swiper-slide">
 							<img src="<?php echo $imagesSrc ?>"/>

@@ -57,7 +57,8 @@ $pCats = get_categories($args);
 
 							$link = get_permalink(get_term_meta($pCat->term_id,'post_sticky_product',true));
 							$titleProduct = get_the_title($ProductID);
-							$price = get_post_meta($ProductID, '_price', true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID, '_price', true)) . ' VND';
+							$price = get_post_meta($ProductID, '_regular_price', true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID, '_regular_price', true)) . ' VNĐ';
+							$slug= get_post_field('post_name',$ProductID)
 							?>
 							<tr>
 								<td class="name-product"><?= $titleProduct ?></td>
@@ -66,6 +67,7 @@ $pCats = get_categories($args);
 									<?php if ($link):?>
 									<a href="<?= $link ?>">Chi tiết ></a>
 									<?php endif;?>
+									<a href="/du-toan-chi-phi/<?= $slug?>">Dự toán ></a>
 									<?php if ($brochureLink = get_term_meta($pCat->term_id,"brochure_file_url",true)):?>
 										<a href="<?= $brochureLink ?>">Tải Brochure ></a>
 									<?php endif;?>
