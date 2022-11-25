@@ -27,9 +27,12 @@ jQuery(function ($) {
 		$('select#bank').change(function () {
 			if ($(this).find('option:selected').val() != '') {
 				url.searchParams.set('bank-code',$(this).find('option:selected').val());
+
+				$('#loan_estimate_table').show();
 			}
 			else {
 				url.searchParams.delete('bank-code');
+				$('#loan_estimate_table').hide();
 			}
 			window.history.pushState(null, null, url); // or pushState
 
@@ -69,6 +72,10 @@ jQuery(function ($) {
 			updateLoanMoney();
 			updateLoanMonth();
 			updateBankName();
+
+			if ($('select#bank').find('option:selected').val() == '') {
+				$('#loan_estimate_table').hide();
+			}
 		}
 
 		init();
@@ -137,6 +144,49 @@ jQuery(function ($) {
 		function formatNumber (num) {
 			return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
 		}
+
+		$('#nav_header_tab_1').click(function () {
+			$(this).toggleClass('active');
+			$('#nav_header_tab_2').removeClass('active');
+			$('#btn_header_tab_1').toggleClass('active');
+			$('#btn_header_tab_2').removeClass('active');
+			$('#area').removeAttr('disabled');
+			$('.select-cars').show();
+			$('#credit_form').show();
+			$('#contact_form').hide()
+		});
+		$('#btn_header_tab_1').click(function () {
+			$(this).toggleClass('active');
+			$('#nav_header_tab_2').removeClass('active');
+			$('#nav_header_tab_1').toggleClass('active');
+			$('#btn_header_tab_2').removeClass('active');
+			$('#area').removeAttr('disabled');
+			$('.select-cars').show();
+			$('#credit_form').show();
+			$('#contact_form').hide()
+		});
+		$('#nav_header_tab_2').click(function () {
+			$(this).toggleClass('active');
+			$('#nav_header_tab_1').removeClass('active');
+			$('#btn_header_tab_1').removeClass('active');
+			$('#btn_header_tab_2').toggleClass('active');
+			$('.select-cars').hide();
+			$('#credit_form').hide();
+			$('#contact_form').show()
+			$('#area').attr('disabled','disabled');
+		});
+
+		$('#btn_header_tab_2').click(function () {
+			$(this).toggleClass('active');
+			$('#nav_header_tab_1').removeClass('active');
+			$('#btn_header_tab_1').removeClass('active');
+			$('#nav_header_tab_2').toggleClass('active');
+			$('.select-cars').hide();
+			$('#credit_form').hide();
+			$('#contact_form').show();
+			$('#area').attr('disabled','disabled');
+
+		});
 
 	})
 })

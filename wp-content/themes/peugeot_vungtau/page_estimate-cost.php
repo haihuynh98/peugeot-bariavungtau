@@ -66,7 +66,7 @@ $banks = [
 	],
 	"vcb" => [
 		"name" => "Ngân hàng Vietcombank",
-		"interest_rate" => 10
+		"interest_rate" => 13
 	]
 ];
 
@@ -108,10 +108,26 @@ $loans = [
 $loanMoney = [
 	50,60,70,80
 ];
+
+$short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 ?>
 
 <?php print_r(get_content_url('')) ?>
 <main class="estimate-page" id="estimate_page">
+	<div class="header-tab" id="header_tab">
+		<div class="container-fluid">
+			<div class="nav-header-tab row">
+				<div class="nav-container col-lg-8 col-12">
+					<a href="javascript:;" class="nav-item step-1 active" id="nav_header_tab_1">Dự toán chi phí</a>
+					<a href="javascript:;" class="nav-item step-2" id="nav_header_tab_2">Đăng ký nhận ưu đãi</a>
+				</div>
+				<div class="groupbutton col-lg-4 col-12 text-lg-end text-center text-nowrap">
+					<a href="javascript:;" class="btn red-button step-1 active" id="btn_header_tab_1">Quay lại</a>
+					<a href="javascript:;" class="btn red-button step-2" id="btn_header_tab_2">Tiếp theo <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="container-fluid container-estimate-info px-md-5">
 		<div class="row">
 			<div class="col-lg-8 col-md-12 col-12 left-panel">
@@ -175,7 +191,7 @@ $loanMoney = [
 									</select>
 								</div>
 
-								<div class="col-12 col-content">
+								<div class="col-12 col-content" id="loan_estimate_table">
 									<label for="loan_estimate" class="form-label">Ước tính</label>
 									<div class="loan-estimate" id="loan_estimate">
 										<div class="row line-center">
@@ -204,10 +220,16 @@ $loanMoney = [
 								</div>
 								<div class="col-12 col-content">
 								<p class="notes">GIÁ CHỈ MANG TÍNH CHẤT THAM KHẢO <br>
-									ĐỂ BIẾT THÊM THÔNG TIN CHI TIẾT, KHÁCH HÀNG VUI LÒNG LIÊN HỆ HOTLINE: <a class="text-danger" ref="tel:(+84)1900545591"> 1900 54 55 91</a></p>
+									ĐỂ BIẾT THÊM THÔNG TIN CHI TIẾT, KHÁCH HÀNG VUI LÒNG LIÊN HỆ HOTLINE: <a class="text-danger" ref="tel:(+84)797299789"> 079 72 99 789</a></p>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="contact-form" id="contact_form" style="display: none;">
+					<p>CẢM ƠN QUÝ KHÁCH ĐÃ CHỌN PEUGEOT. VUI LÒNG ĐIỀN ĐẦY ĐỦ THÔNG TIN DƯỚI ĐÂY ĐỂ ĐẠI LÝ NHẬN ĐẶT HÀNG VÀ LIÊN HỆ</p>
+					<div class="form-wrap-cf7">
+						<?php echo do_shortcode($short_code_cf7)?>
 					</div>
 				</div>
 			</div>
