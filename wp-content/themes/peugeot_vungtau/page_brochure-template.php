@@ -58,7 +58,7 @@ $pCats = get_categories($args);
 
 							$ProductID = get_the_ID();
 							$titleProduct = get_the_title($ProductID);
-							$price = get_post_meta($ProductID, '_price', true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID, '_price', true)) . ' VND';
+							$price = get_post_meta($ProductID, '_regular_price', true) == 0 ? 'Liên hệ' : number_format(get_post_meta($ProductID, '_regular_price', true)) . ' VNĐ';
 							?>
 							<?php if ($brochureLink = get_term_meta($pCat->term_id, "brochure_file_url", true)): ?>
 							<tr>

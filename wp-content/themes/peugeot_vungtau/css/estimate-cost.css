@@ -1,0 +1,318 @@
+.container-estimate-info .left-panel, .container-estimate-info .right-panel {
+  margin-top: 30px;
+}
+.container-estimate-info .left-panel .car-info {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .container-estimate-info .left-panel .car-info > div {
+    padding: 0 40px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container-estimate-info .left-panel .car-info > div.compare-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+.container-estimate-info .left-panel .car-info .image-car {
+  width: 100%;
+}
+.container-estimate-info .left-panel .car-info .image-car img {
+  width: 100%;
+  height: auto;
+}
+.container-estimate-info .left-panel .result-compare h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+.container-estimate-info .left-panel .result-compare .total-cost {
+  font-size: 18px;
+}
+.container-estimate-info .left-panel .result-compare .button {
+  margin-top: 30px;
+}
+.container-estimate-info .left-panel .result-compare .button .btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "UTMBanque", sans-serif;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 45px;
+  display: inline-block;
+  outline: none;
+  transition: all 0.16s ease-in;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(80, 80, 80, 0.2);
+  margin-top: 20px;
+}
+.container-estimate-info .left-panel .result-compare .button .red-button {
+  background: #ac2b31;
+  border: solid 1px #ac2b31;
+}
+.container-estimate-info .left-panel .result-compare .button .red-button:hover {
+  background: #fff;
+  color: #ac2b31;
+}
+.container-estimate-info .left-panel .result-compare .button .gray-button {
+  background: #c1c1c1;
+  border: solid 1px #c1c1c1;
+}
+.container-estimate-info .left-panel .result-compare .button .gray-button:hover {
+  color: #ac2b31;
+}
+.container-estimate-info .left-line {
+  border-left: 2px solid #e5e5e5;
+  padding-left: 10px;
+}
+@media screen and (max-width: 992px) {
+  .container-estimate-info .left-line {
+    border-left: none;
+  }
+}
+.container-estimate-info .select-cars .nav-model {
+  border: solid 1px #e5e5e5;
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: scroll;
+}
+.container-estimate-info .select-cars .nav-model .nav-item span {
+  font-family: "KIAM", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  padding: 3px 10px;
+  color: #a0a0a0;
+  transition: all linear 0.1s;
+  margin: 0;
+  white-space: nowrap;
+}
+.container-estimate-info .select-cars .nav-model .nav-item.active {
+  background-color: #fff;
+  border-radius: 30px;
+}
+.container-estimate-info .select-cars .nav-model .nav-item.active span {
+  color: #1f1f1f;
+  background-color: #fff;
+  border-radius: 30px;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+@media screen and (max-width: 992px) {
+  .container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list {
+    max-height: 80vh;
+  }
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list {
+  width: 100%;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 992px) {
+  .container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+  }
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .name-cat {
+  font-size: 16px !important;
+  color: #919191 !important;
+  padding: 20px 0;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model a {
+  text-decoration: none;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model .car-name, .container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model .car-price {
+  display: block;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model .car-name {
+  text-transform: uppercase;
+  font-family: "KIAM", sans-serif;
+  color: #1f1f1f;
+  font-size: 16px;
+  font-weight: bold;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model .car-price {
+  color: #ac2b31;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.container-estimate-info .select-cars .tab-choose-car .tab-pane .car-list .content-list .choose-model.active {
+  border-bottom: 2px solid #ac2b31;
+}
+.container-estimate-info .select-cars .nav-model::-webkit-scrollbar, .container-estimate-info .select-cars .car-list::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+.container-estimate-info .select-cars .nav-model::-webkit-scrollbar-track, .container-estimate-info .select-cars .car-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.container-estimate-info .select-cars .nav-model::-webkit-scrollbar-thumb, .container-estimate-info .select-cars .car-list::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+  border-radius: 30px;
+}
+
+.color-price {
+  color: #ac2b31;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.model-information .card .card-body .card-title, .cost-detail .card .card-body .card-title {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgb(31, 31, 31);
+}
+
+.cost-detail .cost-detail-table tr > td:first-child {
+  text-align: left;
+}
+.cost-detail .cost-detail-table tr > td:last-child {
+  text-align: right;
+}
+
+#credit_form * {
+  font-family: "KIAM";
+  text-transform: uppercase;
+}
+#credit_form .title-form {
+  font-size: 20px;
+  font-weight: bold;
+}
+#credit_form .content-select .col-content {
+  margin-top: 20px;
+}
+#credit_form .content-select .col-content label.form-label {
+  font-weight: bold;
+}
+#credit_form .content-select .col-content > select, #credit_form .content-select .col-content > input {
+  border: unset;
+  background-color: #f2f5f6;
+  padding: 10px 40px;
+  margin-top: 10px;
+  border-radius: 45px;
+  font-size: 14px;
+}
+#credit_form .loan-estimate {
+  padding: 0 20px 20px 20px;
+  background-color: #f2f5f6;
+  border-radius: 10px;
+}
+#credit_form .loan-estimate .title {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+@media screen and (min-width: 767px) {
+  #credit_form .loan-estimate {
+    padding: 20px;
+  }
+  #credit_form .loan-estimate .col-content:nth-child(1), #credit_form .loan-estimate .col-content:nth-child(2) {
+    margin-top: 0;
+  }
+}
+#credit_form .loan-estimate .line-center {
+  position: relative;
+}
+#credit_form .loan-estimate .line-center:after {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: #c8cacb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  #credit_form .loan-estimate .line-center:after {
+    content: none;
+  }
+}
+
+.header-tab {
+  margin-top: 50px;
+  border-bottom: solid 2px #e5e5e5;
+}
+.header-tab .nav-header-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header-tab .nav-header-tab .nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.header-tab .nav-header-tab .nav-container > a {
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  padding-bottom: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #1f1f1f;
+}
+.header-tab .nav-header-tab .nav-container > a.active {
+  color: #ac2b31;
+  border-bottom: 3px solid #ac2b31;
+}
+.header-tab .nav-header-tab .groupbutton a.btn.active {
+  display: none;
+}
+.header-tab .nav-header-tab .btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "UTMBanque", sans-serif;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 45px;
+  display: inline-block;
+  outline: none;
+  transition: all 0.16s ease-in;
+  cursor: pointer;
+  box-shadow: 0 3px 3px 0 rgba(80, 80, 80, 0.2);
+  margin-top: 20px;
+}
+.header-tab .nav-header-tab .red-button {
+  background: #ac2b31;
+  border: solid 1px #ac2b31;
+}
+.header-tab .nav-header-tab .red-button:hover {
+  background: #fff;
+  color: #ac2b31;
+}
+.header-tab .nav-header-tab .gray-button {
+  background: #c1c1c1;
+  border: solid 1px #c1c1c1;
+}
+.header-tab .nav-header-tab .gray-button:hover {
+  color: #ac2b31;
+}
+
+/*# sourceMappingURL=estimate-cost.css.map */

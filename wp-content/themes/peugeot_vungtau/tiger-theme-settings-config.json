@@ -125,7 +125,17 @@
         "input_type": "text"
       }
     }
+  },
+  "estimate_cost_page": {
+    "title": "Estimate cost page",
+    "type": "section",
+    "fields": {
+      "short_code_cf7_estimate_cost": {
+        "title": "Short code contact form 7",
+        "type": "field",
+        "input_type": "text"
+      }
+    }
   }
-
 }
 
