@@ -113,7 +113,7 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 ?>
 
 <?php print_r(get_content_url('')) ?>
-<main class="estimate-page" id="estimate_page">
+<main class="estimate-page mb-5" id="estimate_page">
 	<div class="header-tab" id="header_tab">
 		<div class="container-fluid">
 			<div class="nav-header-tab row">
