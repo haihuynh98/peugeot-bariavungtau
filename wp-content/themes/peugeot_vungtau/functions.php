@@ -288,7 +288,18 @@ function prefix_url_rewrite_templates() {
 	if (get_query_var( 'p_slug' )) {
 		add_filter( 'template_include', function() {
 			wp_enqueue_style('estimate-cost-page', get_template_directory_uri() . '/css/estimate-cost.css', array(), _S_VERSION);
-			wp_enqueue_script('estimate-cost-page', get_template_directory_uri() . '/js/estimate-cost.js', array(), _S_VERSION, true);
+			wp_enqueue_script('estimate-cost-page', get_template_directory_uri() . '/js/estimate-cost.js', null, _S_VERSION, true);
+//			wp_enqueue_script('html2canvas', get_template_directory_uri() . '/js/html2canvas.min.js', array(), _S_VERSION, true);
+//			wp_enqueue_script('pdfmake', get_template_directory_uri() . '/js/pdfmake.min.js', array(), _S_VERSION, true);
+//			wp_register_script('jquery-slim', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', null, null, true);
+//			wp_script_add_data( 'jquery-slim',  'integrity', 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo');
+//			wp_script_add_data( 'jquery-slim',  'crossorigin' , 'anonymous'  );
+//			wp_enqueue_script('jquery-slim');
+//
+//			wp_enqueue_script('tableHTMLExport', get_template_directory_uri() . '/js/tableHTMLExport.js', array(), _S_VERSION, true);
+//			wp_enqueue_script('jspdf', get_template_directory_uri() . '/js/jspdf.min.js', array(), _S_VERSION, true);
+//			wp_enqueue_script('jspdf-plugin-autotable', get_template_directory_uri() . '/js/jspdf.plugin.autotable.min.js',array("jquery-slim"), _S_VERSION, true);
+
 			return get_template_directory() . '/page_estimate-cost.php';
 		});
 	}
