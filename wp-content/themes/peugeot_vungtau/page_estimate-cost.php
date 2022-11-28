@@ -257,7 +257,7 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 				<div class="loan-detail-table w-100" id="loan_detail_table">
 					<div class="d-flex w-100 justify-content-between align-items-center">
 						<a href="javascript:;" class="show-table">Xem chi tiết</a>
-<!--						<a href="javascript:;" class="btn red-button" id="pdf_download">Xuất PDF</a>-->
+--						<a href="javascript:;" class="btn red-button" id="pdf_download" style="display:none">Xuất PDF</a>-
 					</div>
 					<table
 						class="table table-striped table-hover table-responsive-sm table-responsive-md text-center w-100"
