@@ -385,3 +385,69 @@
 		}
 	}
 }
+
+
+#loan_detail_table {
+
+	* {
+		font-family: "KIAM";
+		text-transform: uppercase;
+	}
+
+	.show-table {
+		padding-right: 20px;
+		text-decoration: none;
+		color: #212529;
+		&:after {
+			content: "➜";
+			display: inline-block;
+			-ms-transform: rotate(90deg); /* IE 9 */
+			transform: rotate(90deg);
+		}
+
+		&.active {
+			&:after {-ms-transform: rotate(270deg); /* IE 9 */
+				transform: rotate(270deg);
+			}
+		}
+	}
+
+	#loan-table {
+		border-radius: 10px;
+		border: 1px solid #c8cacb;
+		font-size: 12px;
+		margin-top: 20px;
+
+		@media (max-width: 767.98px) {
+			display: block;
+		}
+
+		td {
+			border-right: 1px solid #c8cacb;
+		}
+	}
+
+	.btn {
+		text-transform: uppercase;
+		font-size: 14px;
+		font-family: "UTMBanque",sans-serif;
+		color: #fff;
+		padding: 10px 35px;
+		border-radius: 45px;
+		display: inline-block;
+		outline: none;
+		transition: all .16s ease-in;
+		cursor: pointer;
+		box-shadow: 0 3px 3px 0 rgb(80 80 80 / 20%);
+		margin-top: 20px;
+	}
+	.red-button {
+		background: #ac2b31;
+		border: solid 1px #ac2b31;
+
+		&:hover {
+			background: #fff;
+			color: #ac2b31;
+		}
+	}
+}

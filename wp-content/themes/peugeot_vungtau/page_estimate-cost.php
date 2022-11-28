@@ -106,7 +106,7 @@ $loans = [
 ];
 
 $loanMoney = [
-	50,60,70,80
+	50, 60, 70, 80
 ];
 
 $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
@@ -123,7 +123,8 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 				</div>
 				<div class="groupbutton col-lg-4 col-12 text-lg-end text-center text-nowrap">
 					<a href="javascript:;" class="btn red-button step-1 active" id="btn_header_tab_1">Quay lại</a>
-					<a href="javascript:;" class="btn red-button step-2" id="btn_header_tab_2">Tiếp theo <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					<a href="javascript:;" class="btn red-button step-2" id="btn_header_tab_2">Tiếp theo <i
+							class="fa fa-arrow-right" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
@@ -156,13 +157,17 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 						<div class="content-body content-select">
 							<div class="row">
 								<div class="col-12 col-lg-6 col-content">
-									<label for="bank" class="form-label">Chọn ngân hàng<span class="text-danger">*</span></label>
+									<label for="bank" class="form-label">Chọn ngân hàng<span
+											class="text-danger">*</span></label>
 									<select id="bank" class="form-select">
 										<option value="">Chọn một ngân hàng</option>
 
-										<?php foreach ($banks as $codeBank => $bank):?>
-											<option value="<?= $codeBank?>" <?= isset($_GET['bank-code']) && $_GET['bank-code'] == $codeBank ? 'selected' : '' ?> data-interest_rate="<?= $bank['interest_rate']?>" data-bank_name="<?= $bank["name"]?>"><?= $bank["name"].' ('.$bank["interest_rate"].'%)'?></option>
-										<?php endforeach;?>
+										<?php foreach ($banks as $codeBank => $bank): ?>
+											<option
+												value="<?= $codeBank ?>" <?= isset($_GET['bank-code']) && $_GET['bank-code'] == $codeBank ? 'selected' : '' ?>
+												data-interest_rate="<?= $bank['interest_rate'] ?>"
+												data-bank_name="<?= $bank["name"] ?>"><?= $bank["name"] . ' (' . $bank["interest_rate"] . '%)' ?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 								<div class="col-12 col-lg-6 col-content">
@@ -170,24 +175,32 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 									<select id="loan" class="form-select">
 										<option value="" disabled>Chọn thời gian vay</option>
 
-										<?php foreach ($loans as $key => $loan):?>
-											<option value="<?= $key?>"  <?= isset($_GET['loan']) && $_GET['loan'] == $key ? 'selected' : '' ?> data-months="<?= $loan['months']?>"><?= $loan["title"]?></option>
-										<?php endforeach;?>
+										<?php foreach ($loans as $key => $loan): ?>
+											<option
+												value="<?= $key ?>" <?= isset($_GET['loan']) && $_GET['loan'] == $key ? 'selected' : '' ?>
+												data-months="<?= $loan['months'] ?>"><?= $loan["title"] ?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 								<div class="col-12 col-lg-6 col-content">
-									<label for="total_price" class="form-label">Giá trị tài sản định mua<span class="text-danger">*</span></label>
-									<input type="text" class="form-control total-cost-number total-cost-label" name="total_price" disabled id="total_price" data-number="<?=$totalCost?>" value="<?= number_format($totalCost) . ' VNĐ'; ?>">
+									<label for="total_price" class="form-label">Giá trị tài sản định mua<span
+											class="text-danger">*</span></label>
+									<input type="text" class="form-control total-cost-number total-cost-label"
+										   name="total_price" disabled id="total_price" data-number="<?= $totalCost ?>"
+										   value="<?= number_format($totalCost) . ' VNĐ'; ?>">
 								</div>
 
 								<div class="col-12 col-lg-6 col-content">
-									<label for="loan_money" class="form-label">Số tiền vay<span class="text-danger">*</span></label>
+									<label for="loan_money" class="form-label">Số tiền vay<span
+											class="text-danger">*</span></label>
 									<select id="loan_money" class="form-select">
 										<option disabled>Chọn số tiền vay</option>
 
-										<?php foreach ($loanMoney as $percent):?>
-											<option value="<?= $percent?>" <?= isset($_GET['loan-percent']) && $_GET['loan-percent'] == $percent ? 'selected' : '' ?>  data-number="<?= $totalCost * ($percent/100)?>"><?= $percent.'% - '. number_format($totalCost * ($percent/100)) . ' VNĐ'; ?></option>
-										<?php endforeach;?>
+										<?php foreach ($loanMoney as $percent): ?>
+											<option
+												value="<?= $percent ?>" <?= isset($_GET['loan-percent']) && $_GET['loan-percent'] == $percent ? 'selected' : '' ?>
+												data-number="<?= $totalCost * ($percent / 100) ?>"><?= $percent . '% - ' . number_format($totalCost * ($percent / 100)) . ' VNĐ'; ?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 
@@ -197,40 +210,73 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 										<div class="row line-center">
 											<div class="col-md-6 col-12 col-content">
 												<p class="title">Số tiền phải trả hàng tháng</p>
-												<strong class="color-price"><span class="price-per-month" id="price_per_month">123,456,789</span> VNĐ</strong>
+												<strong class="color-price"><span class="price-per-month"
+																				  id="price_per_month">123,456,789</span>
+													VNĐ</strong>
 												<input type="hidden" name="price_per_month" value="123456789">
 											</div>
 											<div class="col-md-6 col-12 col-content">
 												<p class="title">Số năm</p>
-												<strong><span class="months" id="months">12</span> tháng (<span class="year" id="year">1</span> năm)</strong>
+												<strong><span class="months" id="months">12</span> tháng (<span
+														class="year" id="year">1</span> năm)</strong>
 												<input type="hidden" name="months" value="12">
 											</div>
 											<div class="col-md-6 col-12 col-content">
 												<p class="title">Ngân hàng</p>
-												<strong><span class="bank-name" id="bank_name">Ngân hàng ACB</span></strong>
-												<input type="hidden" name="bank_code" value="vnb" data-bank_name="Vietcombank">
+												<strong><span class="bank-name"
+															  id="bank_name">Ngân hàng ACB</span></strong>
+												<input type="hidden" name="bank_code" value="vnb"
+													   data-bank_name="Vietcombank">
 											</div>
 											<div class="col-md-6 col-12 col-content">
 												<p class="title">Tổng tiền</p>
-												<strong class="color-price"><span class="total-loan-money" id="total_loan_money">123,456,789</span> VNĐ</strong>
+												<strong class="color-price"><span class="total-loan-money"
+																				  id="total_loan_money">123,456,789</span>
+													VNĐ</strong>
 												<input type="hidden" name="total_loan_money" value="123456789">
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-12 col-content">
-								<p class="notes">GIÁ CHỈ MANG TÍNH CHẤT THAM KHẢO <br>
-									ĐỂ BIẾT THÊM THÔNG TIN CHI TIẾT, KHÁCH HÀNG VUI LÒNG LIÊN HỆ HOTLINE: <a class="text-danger" ref="tel:(+84)797299789"> 079 72 99 789</a></p>
+									<p class="notes">GIÁ CHỈ MANG TÍNH CHẤT THAM KHẢO <br>
+										ĐỂ BIẾT THÊM THÔNG TIN CHI TIẾT, KHÁCH HÀNG VUI LÒNG LIÊN HỆ HOTLINE: <a
+											class="text-danger" ref="tel:(+84)797299789"> 079 72 99 789</a></p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="contact-form" id="contact_form" style="display: none;">
-					<p>CẢM ƠN QUÝ KHÁCH ĐÃ CHỌN PEUGEOT. VUI LÒNG ĐIỀN ĐẦY ĐỦ THÔNG TIN DƯỚI ĐÂY ĐỂ ĐẠI LÝ NHẬN ĐẶT HÀNG VÀ LIÊN HỆ</p>
+					<p>CẢM ƠN QUÝ KHÁCH ĐÃ CHỌN PEUGEOT. VUI LÒNG ĐIỀN ĐẦY ĐỦ THÔNG TIN DƯỚI ĐÂY ĐỂ ĐẠI LÝ NHẬN ĐẶT HÀNG
+						VÀ LIÊN HỆ</p>
 					<div class="form-wrap-cf7">
-						<?php echo do_shortcode($short_code_cf7)?>
+						<?php echo do_shortcode($short_code_cf7) ?>
 					</div>
+				</div>
+				<div class="loan-detail-table w-100" id="loan_detail_table">
+					<div class="d-flex w-100 justify-content-between align-items-center">
+						<a href="javascript:;" class="show-table">Xem chi tiết</a>
+<!--						<a href="javascript:;" class="btn red-button" id="pdf_download">Xuất PDF</a>-->
+					</div>
+					<table
+						class="table table-striped table-hover table-responsive-sm table-responsive-md text-center w-100"
+						id="loan-table" style="display:none">
+						<thead>
+						<tr>
+							<th scope="col">Kì hạn (Tháng)</th>
+							<th scope="col">Tổng tiền phải trả</th>
+							<th scope="col">Tiền gốc</th>
+							<th scope="col">Tiền lãi</th>
+							<th scope="col">Tổng còn lại</th>
+							<th scope="col">Lãi suất thật(%) trên tháng</th>
+						</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div class="w-100 text-end">
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-12 col-12 left-line right-panel">
@@ -335,13 +381,15 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 						</div>
 					</div>
 				</div>
-				<?php if ($currentPrice != 0):?>
+				<?php if ($currentPrice != 0): ?>
 					<div class="cost-detail mt-3">
 						<div class="card">
 							<div class="card-body">
 								<div class="row">
 									<div class="col-5 text-start"><h5 class="card-title">Chi Phí</h5></div>
-									<div class="col-7 text-end color-price text-nowrap"><span class="total-cost-label"><?= number_format($totalCost). ' VNĐ'; ?></span></div>
+									<div class="col-7 text-end color-price text-nowrap"><span
+											class="total-cost-label"><?= number_format($totalCost) . ' VNĐ'; ?></span>
+									</div>
 								</div>
 								<hr>
 								<table class="cost-detail-table w-100">
@@ -354,18 +402,24 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 									<tr>
 										<td class="title align-middle"><span>Phí trước bạ (10%)</span></td>
 										<td class="price align-middle text-nowrap">
-											<span id="label_registration_fee"><?= number_format($registration_fee); ?></span><span> VNĐ</span></td>
+											<span
+												id="label_registration_fee"><?= number_format($registration_fee); ?></span><span> VNĐ</span>
+										</td>
 									</tr>
 									<tr>
 										<td class="title align-middle"><span>Phí đăng kiểm biển số</span></td>
 										<td class="price align-middle text-nowrap">
-											<span id="label_lpr_fee"><?= number_format($lpr_fee) ; ?></span><span> VNĐ</span></td>
+											<span
+												id="label_lpr_fee"><?= number_format($lpr_fee); ?></span><span> VNĐ</span>
+										</td>
 									</tr>
 
 									<tr>
 										<td class="title align-middle"><span>Ưu đãi</span></td>
 										<td class="price align-middle text-nowrap"><span
-												id="label" style="font-weight: bold"><?= number_format($discount) . ' VNĐ'; ?></span></td>
+												id="label"
+												style="font-weight: bold"><?= number_format($discount) . ' VNĐ'; ?></span>
+										</td>
 									</tr>
 									</tbody>
 									<input type="hidden" value="<?= $currentPrice ?>" id="cost_car" name="cost_car">
@@ -382,6 +436,16 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 		</div>
 	</div>
 </main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.min.js"></script>
+<script src="<?=get_template_directory_uri()?>/js/jspdf.plugin.autotable.min.js"></script>
+<script src="<?=get_template_directory_uri()?>/js/tableHTMLExport.js"></script>
+<!---->
+<!--<script>-->
+<!--	$('#pdf_download').on('click',function () {-->
+<!--		$("#loan-table").tableHTMLExport({type:'pdf',filename:'sample.pdf'});-->
+<!--	})-->
+<!--</script>-->
 
 <?php get_footer(); ?>
 
