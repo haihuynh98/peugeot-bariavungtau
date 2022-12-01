@@ -325,6 +325,12 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 															'terms' => $pCat->term_id
 														)
 													),
+													'meta_query' => array(
+														array(
+															'key'     => '_publish_main_product',
+															'compare' => 'NOT EXISTS',
+														),
+													),
 													'posts_per_page' => -1
 												]); ?>
 												<?php while ($product_query->have_posts()) :
