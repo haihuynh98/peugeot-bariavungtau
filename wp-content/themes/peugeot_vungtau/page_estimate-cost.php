@@ -392,7 +392,7 @@ $short_code_cf7 = getTigerOption('short_code_cf7_estimate_cost');
 						<div class="card">
 							<div class="card-body">
 								<div class="row">
-									<div class="col-5 text-start"><h5 class="card-title">Chi Phí</h5></div>
+									<div class="col-5 text-start"><h5 class="card-title">Chi Phí (Tạm tính)</h5></div>
 									<div class="col-7 text-end color-price text-nowrap"><span
 											class="total-cost-label"><?= number_format($totalCost) . ' VNĐ'; ?></span>
 									</div>
